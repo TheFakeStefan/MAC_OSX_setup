@@ -80,6 +80,7 @@ Sublime Text - https://www.sublimetext.com/
 Advanced Editor.
 
 Visual Studio Code -  https://code.visualstudio.com/
+My coding enviroment. See also in the system configuration section which plugins and configuration I use. 
 
 ### Office
 
@@ -137,6 +138,10 @@ Netiquette - https://objective-see.com/products/netiquette.html
 
 # System Configuration
 
+## Fonts
+
+I prefer to use the Hack font on my machine. You can find the font at [Sourcefoundry](https://sourcefoundry.org/hack/).
+
 ## Login Message
 
 Sets a custom message on the Login Window. Always useful if you forgot your MAC somewhere at work.
@@ -190,3 +195,28 @@ setopt prompt_subst
 source ~/.zsh_plugins.sh
 source ~/.aliases
 `
+
+## iTerm2
+
+I use the status bar instead of anything sticked to zsh as you see in the section from zsh. Dowmload and import the json file in the folder iterm2 in this repo.
+
+## Visual Studio Code
+
+Currently I'm using the following extensions on VS Code:
+
+- 1337 Theme
+- Ansible
+- Docker
+- Docker Explorer
+- Git History
+- gitflow
+- GitLens
+- markdownlint
+- psioniq File Header
+- Python
+- Settings Sync
+- SFTP
+- Visual Studio IntelliCode
+- vscode-icons
+
+My personal settigns are in the folder vscode in this repo. 

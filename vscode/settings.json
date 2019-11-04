@@ -1,0 +1,116 @@
+{
+    "editor.renderWhitespace": "all",
+
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,    
+
+    "files.eol": "\n",
+
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "editor.insertSpaces": true,
+
+    "psi-header.config": {
+        "forceToTop": true,
+    },
+    "psi-header.changes-tracking": {
+		"isActive": true,
+		"modAuthor": "Modified By: ",
+		"modDate": "Last Modified: ",
+		"modDateFormat": "date",
+		"include": [ 
+            ".yml"
+        ],
+		"exclude": [
+			".key",
+            ".csr",
+            ".crt"
+		],
+        "autoHeader": "autoSave"
+    },
+    
+    "psi-header.variables": [
+        ["company", "Your company"],
+        [ "author", "Your name"],
+        [ "initials", "You initals"],
+        [ "authoremail", "Your mail"],
+        [ "projectname", "Your project name"]
+    ],
+    "psi-header.templates": [
+        {
+            "language": "*",
+            "template": [
+                "File: <<filename>>",
+                "Local Path: <<filepath>>",
+                "-----",
+                "Project: <<projectname>>",
+                "File Created: <<filecreated('YYYY-MM-DD hh:mm:ss a')>>",
+                "Author: <<author>>, (<<authoremail>>)",
+                "-----",
+                "Last Modified: <<dateformat('YYYY-MM-DD hh:mm:ss a')>>",
+                "Modified By: <<author>>, (<<authoremail>>>)",
+                "-----",
+                "Copyright <<year>> - <<author>>, <<company>>"
+                ]
+        }
+    ],
+    "psi-header.lang-config": [
+        {
+            "language": "markdown",
+            "prefix": "// "
+        },
+        {
+            "language": "markdown",
+            "prefix": "// "
+        },
+        {
+            "language": "jinja",
+            "begin": "#####################################################################",
+            "end": "#####################################################################",
+            "prefix": "## "
+        },
+        {
+            "language": "*",
+            "begin": "#####################################################################",
+            "end": "#####################################################################",
+            "prefix": "# "
+        }
+      
+
+    ],
+    "files.associations": {
+        "*.yml": "ansible",
+        "*.logstash": "logstash"
+    },
+    // "http.proxy": "http://proxy.domain.com:2303/",
+    "sync.gist": "6835ae78925ff2bcf023853db84896fb",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.forceDownload": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "1337",
+    "terminal.integrated.rendererType": "dom",
+    "breadcrumbs.enabled": true,
+    "window.zoomLevel": -1,
+    // "powershell.powerShellExePath": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "editor.fontFamily": "Hack",
+    "editor.tabSize": 2,
+    "explorer.confirmDelete": false,
+    "[json]": {},
+    "sftp.printDebugLog": true,
+    "sftp.debug": true,
+    // "editor.renderWhitespace": "none",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "gitlens.codeLens.visibility": "off",
+    "files.autoSave": "afterDelay"
+}
