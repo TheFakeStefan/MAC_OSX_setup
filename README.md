@@ -138,7 +138,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 I mostly using `.aliases` to make especially ssh connection to weird host names easier to access. The format of the file is like:
 
-```
+```sh
 alias box='ssh -l xxx myhostname.domain.tld'
 ```
 
