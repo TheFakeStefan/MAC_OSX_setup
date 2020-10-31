@@ -12,14 +12,15 @@
     "modDateFormat": "date",
     "exclude": [".key", ".csr", ".crt", ".csv"],
     "excludeGlob": [
-      "**/*.json",
-      "**/*ps1",
       "**/*.csv",
-      "**/*.j2",
-      "**/*.txt",
-      "**/*.logstash",
+      "**/*.json.j2",
+      "**/*.json",
+      "**/*.log",
       "**/*.logstash.conf",
-      "**/*.log"
+      "**/*.md",
+      "**/*.ps1",
+      "**/*.txt",
+      "**/*.yml.j2"
     ],
     "autoHeader": "autoSave",
     "enforceHeader": true
@@ -86,5 +87,7 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.enableSmartCommit": true,
+  "git.autofetch": true
 }
