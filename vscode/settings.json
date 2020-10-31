@@ -12,6 +12,7 @@
     "modDateFormat": "date",
     "exclude": [".key", ".csr", ".crt", ".csv"],
     "excludeGlob": [
+      "**/.gitignore",
       "**/*.csv",
       "**/*.json.j2",
       "**/*.json",
