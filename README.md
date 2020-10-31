@@ -13,11 +13,11 @@ The repository describes the basic setup of my MacBook.
 - [Oh My Zsh](#oh-my-zsh)
 - [iTerm](#iterm)
 - [OS Settings](#os-settings)
+  - [Login Message](#login-message)
+  - [Screenshots](#screenshots)
   - [Finder](#finder)
   - [Terminal](#terminal)
   - [Menu bar](#menu-bar)
-- [Login Message](#login-message)
-  - [Screenshots](#screenshots)
   - [Other](#other)
 
 ## Software
@@ -141,6 +141,22 @@ Take a minute to configure iTerm to your personal needs. My configuration is in 
 
 ## OS Settings
 
+### Login Message
+
+Sets a custom message on the Login Window. Always useful if you forgot your MAC somewhere at work.
+
+```sh
+defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "I'm living at ground flor desk x on building y. Please return me."
+```
+
+### Screenshots
+
+This disables the shadows from a screenshot taken from a Application
+
+```sh
+defaults write com.apple.screencapture disable-shadow -bool true
+```
+
 ### Finder
 
 ```sh
@@ -184,22 +200,6 @@ defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d H.mm"
 
 echo "Show bluetooth and volume and other in the menubar"
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu"
-```
-
-## Login Message
-
-Sets a custom message on the Login Window. Always useful if you forgot your MAC somewhere at work.
-
-```sh
-defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "I'm living at ground flor desk x on building y. Please return me."
-```
-
-### Screenshots
-
-This disables the shadows from a screenshot taken from a Application
-
-```sh
-defaults write com.apple.screencapture disable-shadow -bool true
 ```
 
 ### Other
