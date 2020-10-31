@@ -11,6 +11,7 @@ The repository describes the basic setup of my MacBook.
 - [Manual installation](#manual-installation)
 - [VS Code](#vs-code)
 - [Oh My Zsh](#oh-my-zsh)
+  - [Aliases](#aliases)
 - [iTerm](#iterm)
 - [OS Settings](#os-settings)
   - [Login Message](#login-message)
@@ -131,6 +132,14 @@ Add the following lines:
 ```sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
+
+### Aliases
+
+I mostly using `.aliases` to make especially ssh connection to weird host names easier to access. The format of the file is like:
+
+```
+alias box='ssh -l xxx myhostname.domain.tld'
 ```
 
 ## iTerm
