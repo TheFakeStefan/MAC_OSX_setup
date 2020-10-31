@@ -22,7 +22,7 @@ The repository describes the basic setup of my MacBook.
 
 ## Software
 
-Make the life as easy as possible. I don't use any Application from the AppStore. I rather use Homebrew for nearly everything.
+Make the life as easy as possible. I try to avoid Application from the AppStore and rather use Homebrew.
 
 Install Homebrew by:
 
@@ -89,7 +89,7 @@ brew install zsh-completions
 
 ## Manual installation
 
-In addition you need to manually install [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio), [Microsoft Remote Desktop](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12), Microsoft Office.
+In addition you need to manually install [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio) and [Microsoft Remote Desktop](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12).
 
 ## VS Code
 
