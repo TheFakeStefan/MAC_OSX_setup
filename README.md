@@ -1,222 +1,222 @@
+## Intro
+
+The repository describes the basic setup of my MacBook.
+
+## Table of Contents
+
+- [Intro](#intro)
+- [Table of Contents](#table-of-contents)
+- [Software](#software)
+  - [Small tools](#small-tools)
+- [Manual installation](#manual-installation)
+- [VS Code](#vs-code)
+- [Oh My Zsh](#oh-my-zsh)
+- [iTerm](#iterm)
+- [OS Settings](#os-settings)
+  - [Finder](#finder)
+  - [Terminal](#terminal)
+  - [Menu bar](#menu-bar)
+- [Login Message](#login-message)
+  - [Screenshots](#screenshots)
+  - [Other](#other)
+
+## Software
+
+Make the life as easy as possible. I don't use any Application from the AppStore. I rather use Homebrew for nearly everything.
+
+Install Homebrew by:
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+After the installation is completed, trigger the installation of all other software:
+
+```sh
+brew cask install aerial
+brew cask install anaconda
+brew cask install bettertouchtool
+brew cask install cakebrew
+brew cask install coderunner
+brew cask install cyberduck
+brew cask install drawio
+brew cask install firefox
+brew cask install istat-menus
+brew cask install iterm2
+brew cask install jiggler
+brew cask install keepassxc
+brew cask install keka
+brew cask install pgadmin4
+brew cask install quicklook-json
+brew cask install r
+brew cask install rstudio
+brew cask install suspicious-package
+brew cask install virtualbox
+brew cask install visual-studio-code
+brew cask install vlc
+brew cask install wireshark
+
+# Hack Font
+brew cask install font-hack
+
+# Markdown App
+brew cask install joplin
+
+# Research Assistant
+brew cask install zotero
+
+# If you have to manage VMs in your env
+brew cask install vmware-remote-console
+
+# If you stick to MSFT
+brew cask install microsoft-azure-storage-explorer
+# Includes OneDrive
+brew cask install microsoft-office
+brew cask install microsoft-teams
+```
+
+### Small tools
+
+```sh
+brew install autojump
+brew install jq
+brew install nmap
+brew install telnet
+brew install thefuck
+brew install zsh
+brew install zsh-completions
+```
+
+## Manual installation
+
+In addition you need to manually install [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio), [Microsoft Remote Desktop](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12), Microsoft Office.
+
+## VS Code
+
+Extension I'm using:
+
+```sh
+code-settings-sync
+code-spell-checker
+gitflow
+gitlens
+markdown-all-in-one
+markdown-shortcuts
+markdown-table-formatter
+prettier-vscode
+psi-header
+python
+sftp
+template-finder v1.3.2
+Theme-1337
+vscode-ansible
+vscode-diff
+vscode-edit-csv
+vscode-format-context-menu
+vscode-todo-highlight
+```
 
+If these extensions are installed I recommend the following additional configuration on the `vscode/settings.json` file.
 
-# Intro
+## Oh My Zsh
 
-The repo decribes the basic setup of my MAC OSX. It is not a list of the **best** tools around the MAC. It might be fisable that there a bettter tools out there in the meanwhile that are not respected. Again please note it is just my personal setup.
+In my `.zshrc` configuration file adjust the following line
 
-# Tools
+```sh
+HIST_STAMPS="dd.mm.yyyy"
+```
 
-## Audio and Video Tools
+Add the following lines:
 
-[VLC media player](http://www.videolan.org/index.html)
+```sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
 
-## Browsers
+## iTerm
 
-[Firefox](https://www.mozilla.org/de/firefox/)
+Take a minute to configure iTerm to your personal needs. My configuration is in the attached configuration.
 
-## Communication
+[Default.json](:/7c3fb3f0bd4f46ae9e8b729c10e22247)
 
-### File Sharing
+## OS Settings
 
-Cyberduck - https://cyberduck.io/
+### Finder
 
-## Cloud Storage
+```sh
+echo "Finder: Show all filename extensions"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-Nextcloud - https://nextcloud.com/
-If you have a private setup where you want to keep your files in sync.
+echo "Finder: Show hidden files by default"
+defaults write com.apple.Finder AppleShowAllFiles -bool true
 
-## Developer Tools
+echo "Finder: Expand save dialog by default"
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-### API Development and Analysis
+echo "Finder: Show the ~/Library folder"
+chflags nohidden ~/Library
 
-Insomnia - https://insomnia.rest/
+echo "Finder: Show Path bar"
+defaults write com.apple.finder ShowPathbar -bool true
 
-### Command Line Tools
+echo "Finder: Show Status bar"
+defaults write com.apple.finder ShowStatusBar -bool true
+```
 
-Homebrew - https://brew.sh/index_de
+### Terminal
 
-iTerm2 - https://www.iterm2.com/
-An alternative terminl.
+```sh
+# echo "Only use UTF-8 in Terminal.app"
+defaults write com.apple.terminal StringEncodings -array 4
+```
 
-tmux - https://github.com/tmux/tmux
+### Menu bar
 
-Oh My Zsh - https://github.com/robbyrussell/oh-my-zsh
+```sh
+echo "Enable Show remaining battery time"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
-### Database Tools
+echo "Don't show the remaining time on battery"
+defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
-PSequel - http://www.psequel.com/
+echo "Set date display in menu bar"
+defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d H.mm"
 
-Sequel - http://www.sequelpro.com/
-
-### Network Analysis
-
-Proxyman - https://proxyman.io/
-
-Wireshark https://www.wireshark.org/
-
-### Other
-
-TAD Viewer - https://www.tadviewer.com/
-
-Cacher - https://www.cacher.io/
-
-### Version Control
-
-Git - https://git-scm.com/download/mac
-
-GitHub Desktop - https://desktop.github.com/
-
-### Virtualization
-
-Docker - https://www.docker.com/
-
-Virutal Box - http://www.virtualbox.org/
-
-## Text Editors
-
-### Text and Code Editors
-
-Sublime Text - https://www.sublimetext.com/
-Advanced Editor.
-
-Visual Studio Code -  https://code.visualstudio.com/
-My coding enviroment. See also in the system configuration section which plugins and configuration I use. 
-
-### Office
-
-Libre Office - https://www.libreoffice.org/
-I like it esxpecially when working with other non-MAC users on docments.
-
-OneNote - https://products.office.com/de-de/onenote/
-
-### RSS
-
-RSS Reader NetNewsWire - https://ranchero.com/netnewswire/
-
-## Utilities
-
-### Clipboard Tools
-
-Clipy - https://github.com/Clipy/Clipy
-I love this app to store often used phrases or snippets into it.
-
-### File Tools
-
-Keka - https://www.keka.io/en/
-
-### Menu Bar Tools
-
-Dozer - https://github.com/Mortennn/Dozer
-
-### Other
-
-BetterRename - https://www.publicspace.net/BetterRename/
-
-PopClip - https://pilotmoon.com/popclip/
-Helpful in daily work on nearly all applications.
-
-### Password Management
-
-KeePassXC - https://keepassxc.org
-
-Password Safe - https://pwsafe.org
-
-### Productivity
-
-BetterTouchTool - https://folivora.ai/
-Set custom shortcuts and gestures for your MAC.
-
-### Security
-
-KnockKnock - https://objective-see.com/products/knockknock.html
-
-LuLu - https://objective-see.com/products/lulu.html
-
-Little Snitch 4 - https://www.obdev.at/products/littlesnitch/download.html
-
-Netiquette - https://objective-see.com/products/netiquette.html
-
-# System Configuration
-
-## Fonts
-
-I prefer to use the Hack font on my machine. You can find the font at [Sourcefoundry](https://sourcefoundry.org/hack/).
+echo "Show bluetooth and volume and other in the menubar"
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu"
+```
 
 ## Login Message
 
 Sets a custom message on the Login Window. Always useful if you forgot your MAC somewhere at work.
 
-`
-defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "I'm living at ground flor desk x."
-`
+```sh
+defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "I'm living at ground flor desk x on building y. Please return me."
+```
 
-## Screenshots
+### Screenshots
 
 This disables the shadows from a screenshot taken from a Application
 
-`
+```sh
 defaults write com.apple.screencapture disable-shadow -bool true
-killall SystemUIServer
-`
+```
 
-## ZSH
+### Other
 
-`
-HISTSIZE=50000
-SAVEHIST=10000
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt inc_append_history
-setopt share_history
+```sh
+echo "Stop iTunes from responding to the keyboard media keys"
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
-# Changing directories
-setopt auto_cd
-setopt auto_pushd
-unsetopt pushd_ignore_dups
-setopt pushdminus
+echo "Disabling smart quotes and dashes..."
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-# Completion
-setopt auto_menu
-setopt always_to_end
-setopt complete_in_word
-unsetopt flow_control
-unsetopt menu_complete
-zstyle ':completion:*:*:*:*:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
-zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+echo "Expand save panel by default"
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
-# Other
-setopt prompt_subst
-source ~/.zsh_plugins.sh
-source ~/.aliases
-`
-
-## iTerm2
-
-I use the status bar instead of anything sticked to zsh as you see in the section from zsh. Dowmload and import the json file in the folder iterm2 in this repo.
-
-## Visual Studio Code
-
-Currently I'm using the following extensions on VS Code:
-
-- 1337 Theme
-- Ansible
-- Docker
-- Docker Explorer
-- Git History
-- gitflow
-- GitLens
-- markdownlint
-- psioniq File Header
-- Python
-- Settings Sync
-- SFTP
-- Visual Studio IntelliCode
-- vscode-icons
-
-My personal settigns are in the folder vscode in this repo. 
+echo "Expand print panel by default"
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+```

@@ -1,116 +1,90 @@
 {
-    "editor.renderWhitespace": "all",
-
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,    
-
-    "files.eol": "\n",
-
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "git.enableSmartCommit": true,
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "editor.insertSpaces": true,
-
-    "psi-header.config": {
-        "forceToTop": true,
-    },
-    "psi-header.changes-tracking": {
-		"isActive": true,
-		"modAuthor": "Modified By: ",
-		"modDate": "Last Modified: ",
-		"modDateFormat": "date",
-		"include": [ 
-            ".yml"
-        ],
-		"exclude": [
-			".key",
-            ".csr",
-            ".crt"
-		],
-        "autoHeader": "autoSave"
-    },
-    
-    "psi-header.variables": [
-        ["company", "Your company"],
-        [ "author", "Your name"],
-        [ "initials", "You initals"],
-        [ "authoremail", "Your mail"],
-        [ "projectname", "Your project name"]
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "psi-header.config": {
+    "forceToTop": true,
+    "blankLinesAfter": 1
+  },
+  "psi-header.changes-tracking": {
+    "isActive": true,
+    "modAuthor": "Modified By: ",
+    "modDate": "Last Modified: ",
+    "modDateFormat": "date",
+    "exclude": [".key", ".csr", ".crt", ".csv"],
+    "excludeGlob": [
+      "**/*.json",
+      "**/*ps1",
+      "**/*.csv",
+      "**/*.j2",
+      "**/*.txt",
+      "**/*.logstash",
+      "**/*.logstash.conf",
+      "**/*.log"
     ],
-    "psi-header.templates": [
-        {
-            "language": "*",
-            "template": [
-                "File: <<filename>>",
-                "Local Path: <<filepath>>",
-                "-----",
-                "Project: <<projectname>>",
-                "File Created: <<filecreated('YYYY-MM-DD hh:mm:ss a')>>",
-                "Author: <<author>>, (<<authoremail>>)",
-                "-----",
-                "Last Modified: <<dateformat('YYYY-MM-DD hh:mm:ss a')>>",
-                "Modified By: <<author>>, (<<authoremail>>>)",
-                "-----",
-                "Copyright <<year>> - <<author>>, <<company>>"
-                ]
-        }
-    ],
-    "psi-header.lang-config": [
-        {
-            "language": "markdown",
-            "prefix": "// "
-        },
-        {
-            "language": "markdown",
-            "prefix": "// "
-        },
-        {
-            "language": "jinja",
-            "begin": "#####################################################################",
-            "end": "#####################################################################",
-            "prefix": "## "
-        },
-        {
-            "language": "*",
-            "begin": "#####################################################################",
-            "end": "#####################################################################",
-            "prefix": "# "
-        }
-      
-
-    ],
-    "files.associations": {
-        "*.yml": "ansible",
-        "*.logstash": "logstash"
+    "autoHeader": "autoSave",
+    "enforceHeader": true
+  },
+  "psi-header.variables": [
+    ["company", "XXX"],
+    ["author", "Stefan"],
+    ["initials", "XXX"],
+    ["authoremail", "XXX"],
+    ["projectname", "XXX"]
+  ],
+  "psi-header.templates": [
+    {
+      "language": "*",
+      "template": [
+        "File: <<filename>>",
+        "Local Path: <<filepath>>",
+        "-----",
+        "Project: <<projectname>>",
+        "File Created: <<filecreated('YYYY-MM-DD hh:mm:ss a')>>",
+        "Author: <<author>>, (<<authoremail>>)",
+        "-----",
+        "Last Modified: <<dateformat('YYYY-MM-DD hh:mm:ss a')>>",
+        "Modified By: <<author>>, (<<authoremail>>>)",
+        "-----",
+        "History:",
+        "-----",
+        "<<year>> - <<author>>, <<company>>"
+      ],
+      "changeLogCaption": "History:",
+      "changeLogHeaderLineCount": 0,
+      "changeLogEntryTemplate": [
+        "<<dateformat('YYYY-MM-DD hh:mm:ss a')>> <<initials>>: "
+      ]
+    }
+  ],
+  "psi-header.lang-config": [
+    {
+      "language": "Markdown",
+      "prefix": "// ",
+      "begin": "<!---",
+      "end": "-->"
     },
-    // "http.proxy": "http://proxy.domain.com:2303/",
-    "sync.gist": "6835ae78925ff2bcf023853db84896fb",
-    "sync.quietSync": false,
-    "sync.askGistName": false,
-    "sync.removeExtensions": true,
-    "sync.syncExtensions": true,
-    "sync.autoDownload": false,
-    "sync.autoUpload": false,
-    "sync.forceDownload": false,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "1337",
-    "terminal.integrated.rendererType": "dom",
-    "breadcrumbs.enabled": true,
-    "window.zoomLevel": -1,
-    // "powershell.powerShellExePath": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "editor.fontFamily": "Hack",
-    "editor.tabSize": 2,
-    "explorer.confirmDelete": false,
-    "[json]": {},
-    "sftp.printDebugLog": true,
-    "sftp.debug": true,
-    // "editor.renderWhitespace": "none",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.jediEnabled": false,
-    "gitlens.codeLens.visibility": "off",
-    "files.autoSave": "afterDelay"
+    {
+      "language": "*",
+      "begin": "#####################################################################",
+      "end": "#####################################################################",
+      "prefix": "# "
+    }
+  ],
+  "files.associations": {
+    "*.yml": "ansible",
+    "*.logstash": "logstash",
+    "*.md": "markdown"
+  },
+  "http.proxyStrictSSL": false,
+  "sync.gist": "6835ae78925ff2bcf023853db84896fb",
+  "editor.fontFamily": "Hack",
+  "editor.tabSize": 2,
+  "[json]": {
+    "editor.tabSize": 4
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
