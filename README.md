@@ -99,11 +99,16 @@ Extension I'm using:
 ```sh
 code-settings-sync
 code-spell-checker
+elastic
+gistfs
 gitflow
+github-gist-explorer
 gitlens
+logstash
 markdown-all-in-one
 markdown-shortcuts
 markdown-table-formatter
+material-icon-theme
 prettier-vscode
 psi-header
 python
@@ -114,6 +119,7 @@ vscode-ansible
 vscode-diff
 vscode-edit-csv
 vscode-format-context-menu
+vscode-markdownlint
 vscode-todo-highlight
 ```
 
