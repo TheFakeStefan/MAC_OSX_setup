@@ -130,8 +130,18 @@ If these extensions are installed I recommend the following additional configura
 In my `.zshrc` configuration file adjust the following line
 
 ```sh
+ZSH_THEME="aussiegeek"
+
+PROMPT='$fg_bold[blue][ $fg[red]%D_%* $fg_bold[blue]] [ $fg[red]History: %! $fg_bold[blue]] [ $fg[red]%n@%m:%~$(git_prompt_info)$fg[yellow]$(rvm_prompt_info)$fg_bold[blue] ] $reset_color
+ $ '
+
 HIST_STAMPS="dd.mm.yyyy"
+
+plugins=(git osx)
 ```
+
+
+
 
 Add the following lines:
 
