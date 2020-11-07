@@ -1,0 +1,9 @@
+
+# more color for grep and ls
+alias grep='grep --color=auto --line-buffered'
+alias ls='ls -G'
+
+# fix typos
+alias dc=cd
+alias grpe=grep
+alias chmox=chmod
