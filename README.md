@@ -80,6 +80,7 @@ brew cask install microsoft-teams
 
 ```sh
 brew install autojump
+brew install chromedriver
 brew install jq
 brew install nmap
 brew install telnet
